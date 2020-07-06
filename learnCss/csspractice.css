@@ -1,0 +1,210 @@
+/*
+* @Colors
+*/
+
+/* rgba Color rgb Max 250  eg: color:rgba(220, 10, 100, 0.5);  */
+/* HTML Color eg: white,black */
+/* rgba Color rgb Max 250 and a max 1 i.e, opacity eg: background-color: rgb(100, 200, 210); */
+/* hexadecimal eg: #FF43FF  => pink*/
+
+/*
+*@FontFamily
+*
+* font-family: Arial, Helvetica, sans-serif;
+* font-family: @Old, @Middle, @Advance;   direction Check of Fonts <--
+*/
+
+/*
+*@Padding top right bottom left => clock wise for four values :)
+*@Padding (top&bottom)(left&right)  for Two values
+*@Margin top right bottom left => clock wise for four values :)
+*@Margin (top&bottom)(left&right)  for Two values
+*/
+
+/*
+**
+*@Floting  while using floting we may messup elements to *clear it we use a div with class= 'clear' then clear use *in css as eg:
+* .clear{
+*  clear: both;      
+*  }
+**
+*/
+
+html,
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 1.6em;
+  margin: 0;
+  height: 100%;
+}
+#mainContainer {
+  min-height: 100%;
+}
+#innermainContainer {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.clear {
+  clear: both; /*Importent*/
+}
+#mainHeader {
+  padding: 5px;
+  color: whitesmoke;
+  background-color: #333;
+}
+
+#mainNav {
+  background-color: #ccc;
+  color: #000;
+  /* Not working test again  */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+#mainNav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#mainNav li {
+  display: inline;
+  padding: 5px 10px;
+}
+#mainNav a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 800;
+}
+#mainNav li:hover {
+  background-color: antiquewhite;
+}
+
+#jumbo {
+  background-image: url("https://image.shutterstock.com/image-photo/split-shot-coral-reef-underwater-260nw-231901846.jpg");
+  background-position: center center;
+  min-height: 200px;
+  text-align: center;
+}
+
+#jumbo h1 {
+  color: rgba(100, 100, 220, 0.5);
+  font-size: 45px;
+  padding: 20px 0;
+  line-height: 1em;
+}
+
+#sidebar {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  /*border-right: 1px solid black;*/
+  box-sizing: border-box;
+}
+
+#main {
+  letter-spacing: 0.2em;
+  word-spacing: 1em;
+  float: right;
+  width: 70%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border-left: 1px solid black;
+}
+
+@media (max-width: 600px) {
+  #main,
+  #sidebar {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+}
+
+#fixed {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgb(150, 100, 10);
+  padding: 5px;
+}
+
+#fixed:hover {
+  background-color: pink;
+}
+
+/*
+* @Animation Psuedo elements and property 
+*/
+
+#Animation_with_before_after_hover h1 {
+  /* background-color: rgb(240, 255, 3); */
+  color: rgba(0, 0, 0, 1);
+  padding: 1rem 2rem;
+  margin: 1rem;
+  width: 250px;
+  position: relative; /*Importent*/
+  overflow: hidden; /*Importent*/
+  font-weight: 800;
+}
+
+#Animation_with_before_after_hover h1::before {
+  content: "";
+  position: absolute; /*Importent*/
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  background-color: #fff;
+  border: 2px solid #272727; /*Check in bottom*/
+  z-index: -1; /*Importent*/
+}
+
+#Animation_with_before_after_hover h1::after {
+  content: "";
+  position: absolute; /*Importent*/
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(250, 100, 10);
+  transform: rotate(-90deg) translate(50%, 100%); /*Importent*/
+  transform-origin: top left; /*Importent*/
+  transition: transform 300ms; /*Importent*/
+  z-index: -2; /*Importent*/
+}
+
+#Animation_with_before_after_hover h1:hover::after {
+  transform: rotate(0) translate(0, 0); /*Importent*/
+}
+
+/*
+*@Animation Ended Here
+*/
+
+/*
+*@Footer
+*/
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 75%;
+  border-top-right-radius: 75%;
+  margin-bottom: 0;
+}
+
+/* p {
+  border-right: 5px dotted red;
+  border-left: double 5px red;
+  border-top: 5px solid red;
+  border-bottom: 5px dashed red;
+  padding: 10px 5px 10px 5px;
+} */
