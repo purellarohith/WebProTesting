@@ -1,2 +1,2 @@
 # Web Devlopment Course
-This is a learning Repo
+This is a learning Repos
