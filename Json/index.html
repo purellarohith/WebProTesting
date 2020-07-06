@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JsonTesing</title>
+  </head>
+  <body>
+    <ul id="list"></ul>
+    <ul id="listinnerJson"></ul>
+    <script>
+      /*
+       *@firstFetchAPi
+       */
+
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then(
+          (resp) => resp.json()
+          // {
+          //   //console.log(resp.json())
+          // }
+        )
+        .then((json) => {
+          console.log(json);
+          var users = json;
+          var output = "";
+          for (let i = 0; i < users.length; i++) {
+            output += "<li>" + users[i].name + "</li>"; //Importent
+          }
+
+          document.getElementById("list").innerHTML = output;
+        });
+
+      /*
+       *@secondFetchJsonFile
+       */
+
+      fetch("data.json")
+        .then(
+          (resp) => resp.json()
+          // {
+          //   console.log(resp.json())
+          // }
+        )
+        .then((json) => {
+          console.log(json.users);
+          var users = json.users;
+          var outputs = "";
+          for (let i = 0; i < users.length; i++) {
+            outputs += "<li>" + users[i].name + "</li>"; //Importent
+          }
+
+          //console.log(typeof(outputs))
+
+          document.getElementById("listinnerJson").innerHTML = outputs;
+        });
+    </script>
+  </body>
+</html>

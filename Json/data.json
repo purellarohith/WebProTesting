@@ -1,0 +1,22 @@
+{
+  "users":[
+    {
+      "name":"rohith",
+      "age":22,
+      "phoneNumber":9618481416,
+      "shopingList":[{"listone":["hardDisk","fans"]},{"listtwo":["ledStrips","soundControlers"]},{"listthree":["tyres","HUD","charger","wiper","meter"]}]
+    },
+    {
+      "name":"sai",
+      "age":27,
+      "phoneNumber":9618481456,
+      "shopingList":[{"listone":["hardDisk","fans"]},{"listtwo":["ledStrips","soundControlers"]},{"listthree":["tyres","HUD","charger","wiper","meter"]}]
+    },
+    {
+      "name":"nani",
+      "age":12,
+      "phoneNumber":9618481896,
+      "shopingList":[{"listone":["hardDisk","fans"]},{"listtwo":["ledStrips","soundControlers"]},{"listthree":["tyres","HUD","charger","wiper","meter"]}]
+    }
+  ]
+}
