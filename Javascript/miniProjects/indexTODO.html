@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+  </head>
+  <body>
+    <div id="mainContainer">
+      <div id="inputContainer">
+        <div id="h1Conatainer">
+          <h1>"TODO LIST"</h1>
+        </div>
+        <div id="inputTextContainer">
+          <input
+            type="text"
+            name="textinput"
+            placeholder="Add a Task"
+            id="input-Text"
+            value=""
+          />
+          <button type="submit" class="addTaskBtn">+</button>
+        </div>
+      </div>
+      <div id="outputContainer">
+        <div id="listTitle">
+          <h2>Todo Items</h2>
+          <button type="submit" class="removeTotalBtn">Clear List</button>
+        </div>
+        <div id="listContainer">
+          <ul id="lists"></ul>
+        </div>
+      </div>
+    </div>
+    <template id="taskTemplate">
+      <li class="task">
+        <input type="checkbox" />
+        <label
+          ><span class="checkMark">&#10004;</span
+          ><span class="customCheckbox"></span
+        ></label>
+      </li>
+    </template>
+    <script src="./todo.js"></script>
+  </body>
+</html>
